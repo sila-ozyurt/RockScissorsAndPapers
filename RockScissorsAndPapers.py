@@ -59,7 +59,7 @@ def rock_scissors_papers_HediyeSila_Ozyurt():
 
                 #print winners of each game
                 if winners:
-                    print("Winners List")
+                    print("\nWinners List")
                     for i in winners:
                         print(i)
                 else:
@@ -104,11 +104,23 @@ def rock_scissors_papers_HediyeSila_Ozyurt():
                 choices=["yes","no"]
                 users_answ=input("Would you like to play again?\nyes or no: ").lower()
                 pc_answ=random.choice(choices)
-                if users_answ is "no":
+                if users_answ=="no":
+                    #print winners of each game
+                    if winners:
+                        print("\nWinners List")
+                        for i in winners:
+                            print(i)    
                     return
-                elif pc_answ is "no":
+                elif pc_answ=="no":
                     print("computer doesn't like to play again :'(")
+
+                    #print winners of each game
+                    if winners:
+                        print("\nWinners List")
+                        for i in winners:
+                            print(i)    
                     return
+                
                 else:
                     break
                
@@ -120,7 +132,5 @@ def rock_scissors_papers_HediyeSila_Ozyurt():
         sleep(7)
         os.system('cls' if os.name=='nt' else 'clear')
         
-
-        
-
+         
 rock_scissors_papers_HediyeSila_Ozyurt()
